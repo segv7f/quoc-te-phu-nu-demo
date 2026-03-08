@@ -1,0 +1,91 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#0f0f1a;
+color:white;
+overflow-x:hidden;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.title{
+font-size:60px;
+background:linear-gradient(90deg,#ff6ea8,#ffc3d8);
+-webkit-background-clip:text;
+color:transparent;
+animation: glow 6s infinite linear;
+}
+
+@keyframes glow{
+0%{filter:brightness(1)}
+50%{filter:brightness(1.6)}
+100%{filter:brightness(1)}
+}
+
+.subtitle{
+max-width:700px;
+font-size:20px;
+margin-top:20px;
+opacity:0.8;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:100px 20px;
+flex-wrap:wrap;
+}
+
+.photo{
+width:260px;
+height:320px;
+border-radius:20px;
+overflow:hidden;
+transform-style:preserve-3d;
+transition:0.6s;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.6s;
+}
+
+.photo:hover{
+transform:rotateY(12deg) scale(1.05);
+}
+
+.photo:hover img{
+transform:scale(1.2);
+}
+
+.message{
+padding:120px 20px;
+text-align:center;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+font-size:20px;
+}
